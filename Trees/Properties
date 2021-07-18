@@ -1,0 +1,66 @@
+topic : Binary tree
+    Maximum node at level L = 2^L
+    Maximum nodes in a tree at height H is (2^H) - 1 
+    For N nodes, minimum possible height or minimum number of levels are log base 2 (N+1)  
+    A binary tree with L leaves has atleast log base 2 (N+1)+1 number of levels
+
+    
+        1
+       / \
+      2   3
+     /\   /\
+    4  5 6  7
+
+    inorder = L P R
+    preorder = L R P
+    postorder = R L P
+    Level order traversal or BFS = P L R 
+
+    #include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+const int mod = 1000000007;
+
+
+class Solution {
+    vector<string>v;
+    void swap(char *x, char *y) 
+    { 
+        char temp; 
+        temp = *x; 
+        *x = *y; 
+        *y = temp; 
+    } 
+    
+    void permute(char* a,int l, int r, string s2){
+        int i;
+        if(l==r){
+            v.push_back(a);
+        }
+        else{
+            for(int i =l; i<=r; i++){
+                swap((a+l),(a+i));
+                permute(a,l+1,r,s2);
+                swap((a+l),(a+i));
+            }
+        }   
+    }
+public:
+    bool checkInclusion(string s1, string s2) {
+        int n = strlen(s1);
+        int i =1;
+        permute(s1,0,n-1,s2);
+        for(int i =0; i<v.size();i++){
+            if(s2==v[i]) return true;
+        }   
+        return false;  
+    }
+};
+
+int main(){
+    string s1 = "ab";
+    string s2 = "eidbaooo";
+    Solution s;
+    if(s.checkInclusion(s1,s2)==true) cout << "yes";
+    else cout << "no";
+}
