@@ -1,5 +1,5 @@
 # DSA-practise-repo
-Practise Solution for DSA
+Practise Solution for DSA - Contributer Shrey Singh
 
 Data structure and Algorithm (DSA)
 
