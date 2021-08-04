@@ -5,7 +5,7 @@ using namespace std;
 //Using Sieve of Eranthotes we are giving all the prime factors of provided number
 int main()
 {
-    int n = 62;
+    int n = 6;
     // ALSO HERE SPF smallest prime factor
     // we have created a spf visited array and mark all its elements as 0
     int spf[1000] = {0};

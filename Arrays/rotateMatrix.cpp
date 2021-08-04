@@ -14,6 +14,7 @@ const int mod = 1000000007;
 // 2 5 8
 // 3 6 9
 
+// transpose is reversed by columns
 //rotation
 // 7 4 1
 // 8 5 2

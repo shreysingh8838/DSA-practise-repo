@@ -34,18 +34,21 @@ class Solution
 public:
     vector<int> twoSum(vector<int> &nums, int target)
     {
-        vector<int>twoSum;
-        unordered_map<int,int> m;
-        
-        for(int i=0; i <nums.size(); i++){
-            if(m.find(nums[target-nums[i]]) != m.end()) {
-                twoSum.push_back(m[target-nums[i]]);
-                twoSum.push_back(i);
-                return twoSum;
+        vector<int> ans;
+        unordered_map<int, int> mp;
+
+        int n = nums.size();
+        for (int i = 0; i < n; i++)
+        {
+            if (mp.find(target - nums[i]) != mp.end())
+            {
+                ans.push_back(mp[target - nums[i]]);
+                ans.push_back(i);
+                return ans;
             }
-            m[nums[i]] = i;
+            mp[nums[i]] = i;
         }
-        return twoSum;
+        return ans;
     }
 };
 
@@ -53,8 +56,8 @@ int main()
 {
     fast;
     Solution s;
-    vector<int> nums = {2,7,11,15};
-    vector<int> twoSum = s.twoSum(nums, 9);
+    vector<int> nums = {3, 3, 5, 5, 2, 2};
+    vector<int> twoSum = s.twoSum(nums, 7);
     for (auto it : twoSum)
     {
         cout << it << " ";
