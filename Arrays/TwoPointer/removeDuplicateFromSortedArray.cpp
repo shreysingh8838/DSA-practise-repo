@@ -22,6 +22,14 @@ const int mod = 1000000007;
 // };
 
 // Most optimal approach - TWO pointer
+
+// Algorithm:
+// 1. let i and j be two pointers
+// 2. initially i=0th index
+//              j=1st index
+// 3. if value at ith and jth index are same then increment j
+// 4. if values are not same then we increment i and copy value from jth index to ith index and then incremnet j
+
 class Solution
 {
 public:

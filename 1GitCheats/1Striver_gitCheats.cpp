@@ -13,5 +13,6 @@
 // git status
 // git add .
 // git commit -m "<any flag>"
-// git push origin master // master is my main branch name
+// git pull --rebase origin master
+// git push -u origin master // master is my main branch name
 
