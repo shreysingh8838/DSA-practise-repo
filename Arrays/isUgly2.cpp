@@ -4,6 +4,8 @@ using namespace std;
 #define ll long long int
 const int mod = 1000000007;
 
+// UGLY NUMBERS ARE THOSE NUMBERS WHICH CAN ONLY BE FACTORIZED INTO 2,3 AND 5
+
 // using my normal naive approach but giving tle for larger values
 // So we got new HEAP solution
 // we can also do this using dp
@@ -28,24 +30,24 @@ bool isUgly(long long int n)
 }
 
 // Main function
-// int nthUglyNumber(int n)
-// {
-//     long long int counter = 0;
-//     long long int i = 0;
-//     while (counter < n)
-//     {
-//         if (isUgly(i))
-//         {
-//             counter++;
-//         }
-//         if (counter == n)
-//         {
-//             return i;
-//         }
-//         i++;
-//     }
-//     return i;
-// }
+int nthUglyNumber(int n)
+{
+    long long int counter = 0;
+    long long int i = 0;
+    while (counter < n)
+    {
+        if (isUgly(i))
+        {
+            counter++;
+        }
+        if (counter == n)
+        {
+            return i;
+        }
+        i++;
+    }
+    return i;
+}
 
 // USING HEAP
 class Solution

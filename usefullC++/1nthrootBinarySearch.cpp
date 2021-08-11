@@ -22,7 +22,7 @@ double eps = 1e-6;
 int main()
 {
     // x is for the number and n is for the nth root
-    double x = 5;
+    double x = 1;
     int n = 2;
     //we defined the range of any root from 1 till the exact ndumber
     double low = 1, high = x, mid;

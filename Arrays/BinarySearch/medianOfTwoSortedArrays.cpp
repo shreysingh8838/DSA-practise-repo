@@ -7,6 +7,6 @@ const int mod = 1000000007;
 int main()
 {
     fast;
-    cout << ((double)5/2) ;
+
     return 0;
 }

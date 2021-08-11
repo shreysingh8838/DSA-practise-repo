@@ -7,6 +7,6 @@ const int mod = 1000000007;
 int main()
 {
     fast;
-    cout << ((double)5/2) ;
-    return 0;
+    int n = 92123;
+    cout << floor(log10(n) + 1); // => 5
 }

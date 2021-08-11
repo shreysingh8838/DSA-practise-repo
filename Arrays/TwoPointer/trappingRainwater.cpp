@@ -16,17 +16,22 @@ class Solution
 public:
     int trap(vector<int> &height)
     {
+        // initialize output
         int res = 0;
         int n = height.size();
+        // indices to traverse the array
         int left = 0, right = n - 1; // two of most important pointers
+        // maximum element on left and right
         int leftmax = 0, rightmax = 0;
         while (left <= right)
         {
             if (height[left] <= height[right])
             {
                 if (height[left] >= leftmax)
+                    // update max in left
                     leftmax = height[left];
                 else
+                    // water on curr element = max - curr
                     res += leftmax - height[left];
 
                 left++;
@@ -34,6 +39,7 @@ public:
             else
             {
                 if (height[right] >= rightmax)
+                    // update right maximum
                     rightmax = height[right];
                 else
                     res += rightmax - height[right];
