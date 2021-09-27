@@ -33,7 +33,7 @@ int main()
 {
     fast;
     vector<int> arr = {3, 1, 2};
-    Solution s;
+    Solution s; 
     vector<int> ans = s.subsetSums(arr, 3);
     for (auto it : ans)
     {

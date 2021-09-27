@@ -35,7 +35,7 @@ int calcDiameter(Node *root)
 {
     if (root == NULL)
         return 0;
-    return max(calcHeight(root->left) + calcHeight(root->right) + 1, max(calcDiameter(root->left), calcDiameter(root->right)));
+    return max(calcHeight(root->left) + calcHeight(root->right) , max(calcDiameter(root->left), calcDiameter(root->right)));
 }
 int main()
 {

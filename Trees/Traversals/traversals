@@ -1,0 +1,6 @@
+We have 2 types of traversals 
+    BFS and DFS
+        and in DFS we have 3 types
+        1st inroder traversals (Left -> root -> right)
+        2nd Pre order (Root-> left -> right)
+        3rd Post order (left -> right -> root)

@@ -3,20 +3,20 @@ using namespace std;
 #define ll long long int
 const int mod = 1000000007;
 
-// struct Node
-// {
-//     int data;
-//     struct Node *left;
-//     struct Node *right;
+struct Node
+{
+    int data;
+    struct Node *left;
+    struct Node *right;
 
-//     //Constructor
-//     Node(int val)
-//     {
-//         this->data = val;
-//         this->left = NULL;
-//         this->right = NULL;
-//     }
-// };
+    //Constructor
+    Node(int val)
+    {
+        this->data = val;
+        this->left = NULL;
+        this->right = NULL;
+    }
+};
 
 
 // ALGO
@@ -32,7 +32,9 @@ int calcHeight(Node *root)
     // calcHeight(root->right) --> to go to the rightmost part of the tree
     // then we will select the greater than of all
     // and atlast we will add 1 to add the main root node
-    return max(calcHeight(root->left), calcHeight(root->right)) + 1;
+    int ld=calcHeight(root->left);
+    int rd=calcHeight(root->right);
+    return max(ld, rd) + 1;
 }
 
 int main()

@@ -18,11 +18,19 @@ class Solution{
         func(0,s,path,result);
         return result;
     }
-}
+};
 int main()
 {
     fast;
     string s = "aab";
-    vector<vector<string>> p = partition(s);
+    Solution sol;
+    vector<vector<string>> intervals = sol.partition(s);
+    for (int i = 0; i < intervals.size(); i++)
+    {
+        for(auto it : intervals[i]){
+            string str = it;
+            cout << str << endl;
+        }
+    }
     return 0;
 }
