@@ -4,6 +4,7 @@ using namespace std;
 #define ll long long int
 const int mod = 1000000007;
 
+// https://www.youtube.com/watch?v=sSno9rV8Rhg
 int lcs(string x,int i, string y,int j){
     if(i==x.length() || j==y.length()) return 0;
     if(x[i]==y[j]) return 1 + lcs(x,i+1,y,j+1);

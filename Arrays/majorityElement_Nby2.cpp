@@ -44,6 +44,26 @@ public:
         return element;
     }
 };
+
+// // Using Hashmaps
+// class Solution {
+// public:
+//     int majorityElement(vector<int>& nums) {
+//         unordered_map <int,int> mp;
+//         for(auto it : nums){
+//             mp[it]++;
+//         }
+//         int maxi = INT_MIN;
+//         int num = 0;
+//         for(auto it : mp){
+//             if(maxi < it.second){
+//                 maxi = it.second;
+//                 num = it.first;
+//             }
+//         }
+//         return num;
+//     }
+// };
 int main()
 {
     fast;

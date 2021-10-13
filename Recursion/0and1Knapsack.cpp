@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 #define fast ios_base::sync_with_stdio(false), cin.tie(0), cout.tie(0);
@@ -18,9 +19,7 @@ int knapsack(int wt[], int profit[], int W, int n)
     if (wt[n] > W)
         return knapsack(wt, profit, W, n - 1); // n is getting n-1 as we are traversing right to left
     else
-    {
         return max(knapsack(wt, profit, W, n - 1), profit[n] + knapsack(wt, profit, W - wt[n], n - 1));
-    }
 }
 int main()
 {
