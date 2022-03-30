@@ -11,6 +11,11 @@ const int mod = 1000000007;
 // we will start adding starting element to sum
 // then also we will check if the sum is -ve or not ; if it becomes -ve then we will put it zero and start counting sum from the next upcoming value/indexes
 // we also have a maxi variable to store any previous maximum sum
+
+// for the edge case like
+//  nums = [-1] its output should be -1
+// so for getting that we should find maxi first. As if put sum = 0 first then for this case our output will become zero
+
 class Solution
 {
 public:

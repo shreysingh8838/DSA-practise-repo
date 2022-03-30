@@ -4,7 +4,7 @@ using namespace std;
 //We are giving the greatest common divisor of the two numbers using inclusion-exclusion principle
 int GCD(int n, int m)
 {
-    int r, temp;
+    int r;
     while (m != 0)
     {
         r = n % m;

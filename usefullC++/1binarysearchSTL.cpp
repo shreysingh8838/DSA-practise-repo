@@ -9,7 +9,7 @@ int main()
     int n = 5;
     int a[n] = {3, 8, 6, 4, 12};
 
-    vector<int> v = {3, 8, 6, 4, 12};
+    vector<int> v = {3, 8, 8, 6, 4, 12};
 
     sort(v.begin(), v.end()); // 3 4 6 8 12
     sort(a, a + n);           // 3 4 6 8 12
@@ -24,7 +24,7 @@ int main()
     cout << lower_bound(a, a + n, 5) - a << "\n\n";
 
     // upperbound function -- gives the position of immidiate greater element than provided
-    cout << upper_bound(v.begin(), v.end(), 4) - v.begin() << "\n";
+    cout << upper_bound(v.begin(), v.end(), 8) - v.begin() << "\n";
     cout << upper_bound(a, a + n, 8) - a << "\n\n";
 
     return 0;

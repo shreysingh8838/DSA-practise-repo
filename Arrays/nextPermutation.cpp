@@ -27,8 +27,8 @@ const int mod = 1000000007;
 */
 
 // algorithm for the optimal solution
-// find the i where, a[i] < a[i+1]
-// then from reverse find the a[i2] > a[i1]
+// find the i where, a[i-1] < a[i], then i1 = i-1
+// then from reverse find the any i2 which has, a[i2] > a[i1]
 // then swap both a[i2] and a[i1]
 // then reverse the array from (index i1 + 1 -> last index)
 
@@ -39,7 +39,7 @@ class Solution
 public:
     void nextPermutation(vector<int> &nums)
     {
-        int index1 = -1;
+        int index1 = -1; // why we kept value as -1? -> if we are not able to assign any value to index1 than it will remain -1. So thats how we can check it get changed or not
         int index2 = -1;
         for (int i = nums.size() - 1; i > 0; i--)
         {
@@ -66,7 +66,6 @@ public:
                     break;
                 }
             }
-
             swap(nums[index1], nums[index2]);
             reverse(nums.begin() + index1 + 1, nums.end());
         }

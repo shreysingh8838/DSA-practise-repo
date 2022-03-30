@@ -4,8 +4,8 @@ using namespace std;
 #define ll long long int
 const int mod = 1000000007;
 
-//leetcode
-// made by inspired by subsetSum.cpp problem
+// leetcode
+//  made by me and was inspired by subsetSum.cpp problem
 class Solution
 {
     void func(int index, vector<int> curr, vector<int> &nums, int n, vector<vector<int>> &ans)

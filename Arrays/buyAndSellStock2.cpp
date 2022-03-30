@@ -10,6 +10,13 @@ const int mod = 1000000007;
 // Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
 // Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
 
+//  7      5     6
+//   \   /   \  /  \
+//    1       3     4
+// so we are looking for graphs like (5-1) , (6-3) which is we call increasing
+// and we are skiping the decresing hand of the graph like (7-1), (5-3), (6-4)
+// and atlast all the diff like (5-1), (6-3) and add then into maxprofit variable and then return it
+
 // ALgo -> tc-O(n)
 // find all the pair if the next price is greater than previous then add it to the maxprofit variable
 
